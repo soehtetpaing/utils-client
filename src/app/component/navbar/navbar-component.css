@@ -1,0 +1,134 @@
+/* genius navbar design */
+.scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    animation: float 18s linear infinite;
+}
+
+.shape:hover {
+    animation-play-state: paused;
+}
+
+.circle-sm {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.25);
+    top: 70%;
+    right: 4%;
+    animation-duration: 22s;
+}
+
+.circle-md {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.25);
+    top: 70%;
+    left: 0.25%;
+    animation-duration: 22s;
+}
+
+.circle-lg {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    top: 80%;
+    left: 12%;
+    animation-duration: 22s;
+}
+
+.triangle-sm {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 13px solid rgba(255, 0, 255, 0.25);
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+    top: 100%;
+    left: 4%;
+    /* animation-duration: 26s; */
+    position: absolute;
+    animation: float 18s linear infinite;
+}
+
+.triangle-md {
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 20px solid rgba(255, 255, 0, 0.25);
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+    top: 100%;
+    right: 0%;
+    /* animation-duration: 26s; */
+    position: absolute;
+    animation: float 18s linear infinite;
+}
+
+.rectangle-sm {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 0, 255, 0.25);
+    top: 90%;
+    right: 8%;
+    animation-duration: 20s;
+}
+
+.rectangle-md {
+    width: 15px;
+    height: 10px;
+    background: rgba(255, 255, 0, 0.25);
+    top: 90%;
+    left: 8%;
+    animation-duration: 20s;
+}
+
+.rectangle-lg {
+    width: 20px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    top: 95%;
+    right: 14%;
+    animation-duration: 20s;
+}
+
+.rectangle-xlg {
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 255, 255, 0.25);
+    top: 95%;
+    left: 18%;
+    animation-duration: 20s;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+        10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-350px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.delay-1 { animation-delay: 3s; }
+.delay-2 { animation-delay: 5s; }
+.delay-3 { animation-delay: 9s; }

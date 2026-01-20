@@ -1,0 +1,106 @@
+<div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="d-flex flex-column flex-shrink-0 bg-body-tertiary border" style="min-height: 91vh;">
+    <!-- <div class="border-bottom">
+        <a class="d-flex align-items-center gap-2 m-2 text-decoration-none" routerLink="/home">
+            <img src="utils-v1.ico" alt="Logo" width="30" height="30" class="d-inline">
+            <div class="d-none d-lg-inline" style="font-size: large;">
+                <span class="text-info">Genius</span>
+                <span class="text-muted"> Utils</span>
+            </div>
+        </a>
+    </div> -->
+    
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a routerLink="/util/common" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis active" aria-current="page">
+                <i class="bi bi-infinity"></i>
+                <span class="d-none d-lg-inline ms-2">Common</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/util/datetime" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis" aria-current="page">
+                <i class="bi bi-clock"></i>
+                <span class="d-none d-lg-inline ms-2">Datetime</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/util/media" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis" aria-current="page">
+                <i class="bi bi-soundwave"></i>
+                <span class="d-none d-lg-inline ms-2">Media</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/util/logging" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis" aria-current="page">
+                <i class="bi bi-justify-left"></i>
+                <span class="d-none d-lg-inline ms-2">Logging</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/util/auth" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis" aria-current="page">
+                <i class="bi bi-lock"></i>
+                <span class="d-none d-lg-inline ms-2">Auth</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/util/migration" routerLinkActive="active" class="d-flex align-items-center gap-2 nav-link link-body-emphasis" aria-current="page">
+                <i class="bi bi-view-list"></i>
+                <span class="d-none d-lg-inline ms-2">Migrate Version</span>
+            </a>
+        </li>
+    </ul>
+    
+    <!-- <hr class="m-0" />
+    <div class="dropdown m-2">
+        <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="image/pp.jpg" alt="" width="30" height="30" class="rounded-circle me-lg-2" />
+            <strong class="d-none d-lg-inline">genius.iq</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">My Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-envelope"></i>
+                    <span class="ms-2">Contact Us</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-chat-quote"></i>
+                    <span class="ms-2">FAQ</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-journal-text"></i>
+                    <span class="ms-2">Terms of Service</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-view-list"></i>
+                    <span class="ms-2">Version 1.0.0</span>
+                </a>
+            </li>
+            <li>
+                <hr class="dropdown-divider" />
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-arrow-bar-right"></i>
+                    <span class="ms-2">Sign out</span>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+</div>

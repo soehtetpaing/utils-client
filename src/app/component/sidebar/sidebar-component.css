@@ -1,0 +1,12 @@
+.nav-item > .nav-link {
+    border-radius: 0;
+}
+
+.nav-item > .nav-link.active {
+    background-color: var(--bs-info);
+    color: var(--bs-body-bg);
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}

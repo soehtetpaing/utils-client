@@ -1,0 +1,109 @@
+@use '@angular/material' as mat;
+
+$primary: #0dcaf0;
+
+$density-btn: -1;
+$density-icon-btn: -3;
+$density-form-feild: -5;
+$font-en-size: 14px;
+
+$bg-light: #fff;
+$bg-dark: #171717;
+$bg-light-bs: #F8F9FA;
+$bg-dark-bs: #2B3035;
+
+// light mode
+$light-mode: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$cyan-palette,
+    tertiary: mat.$orange-palette,
+  )
+));
+
+// dark mode
+$dark-mode: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$cyan-palette,
+    tertiary: mat.$orange-palette,
+  )
+));
+
+// english font
+$font-en: mat.define-theme(
+  $config: (
+    typography: (
+      plain-family: 'Lora, sans-serif',
+      brand-family: 'Lora, sans-serif',
+    ),
+  ),
+);
+
+body {
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+.light-mode {
+    @include mat.all-component-themes($light-mode);
+    // @include mat.all-component-densities($density-btn);
+    @include mat.form-field-density($density-form-feild);
+    @include mat.button-density($density-btn);
+    @include mat.icon-button-density($density-icon-btn);
+    // @include mat.input-density($density-btn);
+    background-color: $bg-light;
+    color: #000;
+}
+
+.dark-mode {
+    @include mat.all-component-themes($dark-mode);
+    // @include mat.all-component-densities($density-btn);
+    @include mat.form-field-density($density-form-feild);
+    @include mat.button-density($density-btn);
+    @include mat.icon-button-density($density-icon-btn);
+    // @include mat.input-density($density-btn);
+    background-color: $bg-dark;
+    color: #fff;
+}
+
+.font-en {
+    @include mat.all-component-typographies($font-en);
+    // font-size: 16px;
+
+    mat-form-field {
+        mat-label,
+        .mdc-floating-label,
+        .mdc-floating-label--float-above {
+            font-size: $font-en-size !important;
+        }
+
+        .mdc-text-field__input,
+        .mdc-text-field__input::placeholder {
+            font-size: $font-en-size !important;
+        }
+    }
+}
+
+.mat-mdc-snack-bar-container.toast-success {
+  --mat-snack-bar-container-color: #0d8f81;
+  --mat-snack-bar-supporting-text-color: #ffffff;
+}
+
+.mat-mdc-snack-bar-container.toast-error {
+  --mat-snack-bar-container-color: #e31748;
+  --mat-snack-bar-supporting-text-color: #ffffff;
+}
+
+.mat-mdc-snack-bar-container.toast-info {
+  --mat-snack-bar-container-color: #3b4a6b;
+  --mat-snack-bar-supporting-text-color: #ffffff;
+}
+
+/* 
+mat-form-feild padding align 
+mat-hint use reset default
+*/
+.mat-mdc-form-field-subscript-wrapper, .mat-mdc-form-field-bottom-align::before {
+  height: 0;
+}

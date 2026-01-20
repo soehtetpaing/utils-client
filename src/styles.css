@@ -1,0 +1,22 @@
+html, body { height: 100vh; }
+body { margin: 0; padding: 0; }
+.font-en { font-family: Lora, sans-serif; }
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 53px;
+    z-index: 1010;
+}
+
+.dropdown-menu {
+    z-index: 1055;
+}
+
+.card-title-light-mode { background-color: #fff; }
+.card-title-dark-mode { background-color: #171717; }

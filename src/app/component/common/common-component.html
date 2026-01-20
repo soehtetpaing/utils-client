@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary">
+            <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Syskey</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <small class="text-muted">Result: </small>
+                    <div class="mb-1">{{ syskey }}</div>
+                </div>
+                <button class="btn btn-sm btn-info" (click)="getSyskey()">Get</button>
+                @if (syskey) {
+                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(syskey)">
+                        <i class="bi bi-copy px-1"></i>
+                        <span class="gi-tooltip-text">Copy</span>
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+
+    </div>
+    
+</div>
