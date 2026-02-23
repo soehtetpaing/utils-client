@@ -4,16 +4,23 @@
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Syskey</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ syskey }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getSyskey()">Get</button>
+                        @if (syskey) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(syskey)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ syskey }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getSyskey()">Get</button>
-                @if (syskey) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(syskey)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
     </div>

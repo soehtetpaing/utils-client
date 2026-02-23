@@ -95,9 +95,19 @@ body {
   --mat-snack-bar-supporting-text-color: #ffffff;
 }
 
+.mat-mdc-snack-bar-container.toast-warn {
+  --mat-snack-bar-container-color: #ff9f1c;
+  --mat-snack-bar-supporting-text-color: #ffffff;
+}
+
 .mat-mdc-snack-bar-container.toast-info {
   --mat-snack-bar-container-color: #3b4a6b;
   --mat-snack-bar-supporting-text-color: #ffffff;
+}
+
+.mat-mdc-snack-bar-container .mat-mdc-snack-bar-label {
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* 

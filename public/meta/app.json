@@ -1,0 +1,7 @@
+{
+    "name": "Genius Utils",
+    "version": "1.0.0",
+    "apiUrl": "http://localhost:8000",
+    "defaultDomain": "demo",
+    "secretKey": "OhMyGenius!"
+}

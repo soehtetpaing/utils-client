@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { DarkmodeService } from '../../service/darkmode-service';
+import { DarkmodeService } from '../../utils/darkmode-service';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 

@@ -20,3 +20,29 @@ body { margin: 0; padding: 0; }
 
 .card-title-light-mode { background-color: #fff; }
 .card-title-dark-mode { background-color: #171717; }
+
+.api-content {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: transparent;
+}
+
+.terminal-output {
+    font-family: monospace;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow-inline: auto;
+}
+
+.terminal-output-light-mode { background-color: #e2e1e2; }
+.terminal-output-dark-mode { background-color: #171717; }
+
+@media (min-width: 768px) {
+    .api-content {
+        right: calc(1rem + 5.5%);
+    }
+}

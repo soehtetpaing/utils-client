@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { DarkmodeService } from '../../service/darkmode-service';
+import { DarkmodeService } from '../../utils/darkmode-service';
 import { DatetimeService } from '../../service/datetime-service';
-import { ToastService } from '../../service/toast-service';
+import { ToastService } from '../../utils/toast-service';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -30,7 +30,11 @@ export class DatetimeComponent {
   tokenExpireTime: string = '';
   expireTime: any = '';
 
-  constructor(private toast: ToastService) { }
+  constructor(private toast: ToastService) {}
+
+  ngOnInit(): void {
+    this.darkModeService.updateDarkModeExtra();
+  }
 
   getMyanmarTimestamp() {
     this.mmTimestamp = this.datetimeService.getMyanmarTimestamp();

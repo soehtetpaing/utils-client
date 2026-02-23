@@ -31,6 +31,10 @@ export class ToastService {
     this.show(message, 'Dismiss', 4000, ['toast-error']);
   }
 
+  warn(message: string) {
+    this.show(message, 'Close', 4000, ['toast-warn']);
+  }
+
   info(message: string) {
     this.show(message, 'Close', 3000, ['toast-info']);
   }

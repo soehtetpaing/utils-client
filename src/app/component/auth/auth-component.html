@@ -4,22 +4,178 @@
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get UniqueId</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ uniqueId }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getUniqueId()">Get</button>
+                        @if (uniqueId) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(uniqueId)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ uniqueId }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getUniqueId()">Get</button>
-                @if (uniqueId) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(uniqueId)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
+            </div>
+        </div>
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
+            <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Encrypt Text</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
+                        <mat-label>Enter plain text</mat-label>
+                        <input matInput [(ngModel)]="plainText" id="plainText" placeholder="myP@ssw0rd">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
+                        <mat-label>Enter secret key</mat-label>
+                        <input matInput [(ngModel)]="secretKey" id="secretKey" placeholder="OhMyGenius!">
+                    </mat-form-field>
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="encrypt(plainText, secretKey)">Encrypt</button>
+                        @if (encryptedText) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(encryptedText)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">
+                            $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                        </small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ encryptedText }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
+            <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Decrypt Text</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
+                        <mat-label>Enter encrypted text</mat-label>
+                        <input matInput [(ngModel)]="de_encryptedText" id="de_encryptedText" placeholder="b8de647bf8a8d2383f11f808b8933de0.b67c1d492dff4b406cd36b8e3404085f">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
+                        <mat-label>Enter secret key</mat-label>
+                        <input matInput [(ngModel)]="de_secretKey" id="de_secretKey" placeholder="OhMyGenius!">
+                    </mat-form-field>
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="decrypt(de_encryptedText, de_secretKey)">Decrypt</button>
+                        @if (decryptedText) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(decryptedText)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">
+                            $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                        </small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ decryptedText }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="col-12 col-md-6">
-
-    </div>
     
+    <div class="col-12 col-md-6">  
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4 mt-md-0">
+            <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Generate X-Access-Token</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <mat-form-field appearance="outline" class="col-md-6 pt-2 pb-1 pe-md-1">
+                            <mat-label>Enter secret key</mat-label>
+                            <input matInput [(ngModel)]="x_access_secretKey" id="x_access_secretKey" placeholder="OhMyGenius!">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="col-md-6 ps-md-1 pt-2 pb-1">
+                            <mat-label>Enter domain</mat-label>
+                            <input matInput [(ngModel)]="x_access_domain" id="x_access_domain" placeholder="ms365">
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="generateApiToken(x_access_secretKey, x_access_domain)">Generate</button>
+                        @if (x_access_tokenData.token) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(x_access_tokenData.token)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">
+                        $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                        </small>
+                        <div class="scroll-word-wrap"><small  class="text-muted">$&nbsp; </small>{{ x_access_tokenData.token }}</div>
+                        @if (x_access_tokenData.token) {
+                            <div class=""><small class="text-muted">$&nbsp; ExpireAt: {{x_access_tokenData.expireAt}}</small></div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
+            <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Verify X-Access-Token</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
+                        <mat-label>Enter token</mat-label>
+                        <textarea matInput [(ngModel)]="v_x_access_token" id="v_x_access_token" placeholder="493149584b74694b395250.4f0c86a96587205f1e60c199b95486b695c2655e0e23ae3d95f7328664e6d6d0.19c1f530346.2a">
+                        </textarea>
+                    </mat-form-field>
+                    <div class="row">
+                        <mat-form-field appearance="outline" class="col-md-6 pt-2 pb-1 pe-md-1">
+                            <mat-label>Enter secret key</mat-label>
+                            <input matInput [(ngModel)]="v_x_access_secretKey" id="v_x_access_secretKey" placeholder="OhMyGenius!">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="col-md-6 ps-md-1 pt-2 pb-1">
+                            <mat-label>Enter domain</mat-label>
+                            <input matInput [(ngModel)]="v_x_access_domain" id="v_x_access_domain" placeholder="ms365">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="verifyApiToken(v_x_access_token, v_x_access_secretKey, v_x_access_domain)">Verify</button>
+                        @if (v_x_access_message) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(v_x_access_message)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">
+                            $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                        </small>
+                        <div class="">
+                            @if (v_x_access_message) {
+                                <small  class="text-muted">$&nbsp; </small>{{ v_x_access_status }}
+                            }
+                        </div>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ v_x_access_message }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
