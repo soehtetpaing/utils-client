@@ -1,0 +1,15 @@
+/*----- genius.text.heaven.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2022-04-08";
+    --gi-modified-date: "2026-02-24";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.text-heaven {
+    background: linear-gradient(to right, hotpink, #ff99cc, #33ccff, aqua);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

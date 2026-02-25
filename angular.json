@@ -28,7 +28,15 @@
             "styles": [
               "src/styles.css",
               "src/styles.scss",
-              "public/css/genius.tooltip.css"
+              "public/css/genius.util.css",
+              "public/css/genius.font.css",
+              "public/css/genius.color.css",
+              "public/css/genius.tooltip.css",
+              "public/css/genius.message.shape.css",
+              "public/css/genius.subtle.pattern.css",
+              "public/css/genius.text.amazing.css",
+              "public/css/genius.text.heaven.css",
+              "public/css/genius.text.rainbow.css"
             ]
           },
           "configurations": {

@@ -2,6 +2,11 @@ html, body { height: 100vh; }
 body { margin: 0; padding: 0; }
 .font-en { font-family: Lora, sans-serif; }
 
+.font-nav {
+    background-color: rgba(225, 225, 225, 0.5);
+    padding: 3px;
+}
+
 .navbar-sticky {
     position: sticky;
     top: 0;
@@ -9,6 +14,12 @@ body { margin: 0; padding: 0; }
 }
 
 .sidebar-sticky {
+    position: sticky;
+    top: 53px;
+    z-index: 1010;
+}
+
+.font-nav-sticky {
     position: sticky;
     top: 53px;
     z-index: 1010;

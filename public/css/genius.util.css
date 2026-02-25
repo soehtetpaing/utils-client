@@ -1,0 +1,43 @@
+/*----- genius.util.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2026-02-25";
+    --gi-modified-date: "2026-02-25";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.default {
+    margin: 0;
+    padding: 0;
+}
+
+.line-amazing {
+    height: 2px;
+    background: linear-gradient(to right, deepskyblue 0%, deeppink 100%);
+}
+
+.line-heaven {
+    height: 2px;
+    background: linear-gradient(to right, hotpink, #ff99cc #33ccff, aqua);
+}
+
+.line-rainbow {
+    height: 2px;
+    background: linear-gradient(to right, #6610f2,  #d63384, #0000ff, #20c997, #ffff19, #fd7e14, #ff0000);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.img-profile-size {
+    width: 120px;
+    height: 120px;
+}
+
+.img-icon-size {
+    width: 1.4rem; 
+    cursor: pointer;
+}

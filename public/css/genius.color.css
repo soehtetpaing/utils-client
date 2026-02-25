@@ -1,0 +1,201 @@
+/*----- genius.color.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2026-02-24";
+    --gi-modified-date: "2026-02-24";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.bg-amazing {
+    background: linear-gradient(to right, deepskyblue 0%, deeppink 100%);
+}
+
+.bg-amazing-reverse {
+    background: linear-gradient(to left, deepskyblue 0%, deeppink 100%);
+}
+
+.bg-heaven {
+    background: linear-gradient(to right,hotpink,  #ff99cc, #33ccff, aqua);
+}
+
+.bg-heaven-reverse {
+    background: linear-gradient(to left,hotpink,  #ff99cc, #33ccff, aqua);
+}
+
+.bg-rainbow {
+    background: linear-gradient(to right, #6610f2,  #d63384, #0000ff, #20c997, #ffff19, #fd7e14, #ff0000);
+}
+
+.bg-rainbow-reverse {
+    background: linear-gradient(to left, #6610f2,  #d63384, #0000ff, #20c997, #ffff19, #fd7e14, #ff0000);
+}
+
+.bg-border {
+    border: 1px solid silver;
+}
+
+.bg-tomato {
+    background: tomato;
+}
+
+.bg-red {
+    background: red;
+}
+
+.bg-violet {
+    background: violet;
+}
+
+.bg-hotpink {
+    background: hotpink;
+}
+
+.bg-deeppink {
+    background: deeppink;
+}
+
+.bg-orange {
+    background: orange;
+}
+
+.bg-gold {
+    background: gold;
+}
+
+.bg-yellow {
+    background: yellow;
+}
+
+.bg-lime {
+    background: lime;
+}
+
+.bg-mediumseagreen {
+    background: mediumseagreen;
+}
+
+.bg-green {
+    background: green;
+}
+
+.bg-aqua {
+    background: aqua;
+}
+
+.bg-deepskyblue {
+    background: deepskyblue;
+}
+
+.bg-dodgerblue {
+    background: dodgerblue;
+}
+
+.bg-slateblue {
+    background: slateblue;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-silver {
+    background: silver;
+}
+
+.bg-gray {
+    background: gray;
+}
+
+.bg-black {
+    background: black;
+}
+
+.text-tomato {
+    color: tomato;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-violet {
+    color: violet;
+}
+
+.text-hotpink {
+    color: hotpink;
+}
+
+.text-deeppink {
+    color: deeppink;
+}
+
+.text-orange {
+    color: orange;
+}
+
+.text-gold {
+    color: gold;
+}
+
+.text-yellow {
+    color: yellow;
+}
+
+.text-lime {
+    color: lime;
+}
+
+.text-mediumseagreen {
+    color: mediumseagreen;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-aqua {
+    color: aqua;
+}
+
+.text-deepskyblue {
+    color: deepskyblue;
+}
+
+.text-dodgerblue {
+    color: dodgerblue;
+}
+
+.text-slateblue {
+    color: slateblue;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-silver {
+    color: silver;
+}
+
+.text-gray {
+    color: gray;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-parent {
+    color: transparent;
+}

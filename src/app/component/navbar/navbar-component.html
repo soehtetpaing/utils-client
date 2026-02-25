@@ -55,6 +55,7 @@
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                     <button class="d-none d-lg-inline p-1" mat-icon-button (click)="toggleDarkMode()">
                         <mat-icon
+                            [ngClass]="darkModeService.darkModeSignal() === 'dark' ? 'fa-spin': 'animate__animated animate__swing animate__slow animate__infinite'"
                             [ngStyle]="{ 'color': darkModeService.darkModeSignal() === 'dark' ? '#ffc107' : 'silver' }">
                             {{ darkModeService.darkModeSignal() === 'dark' ? 'light_mode' : 'dark_mode' }}
                         </mat-icon>
