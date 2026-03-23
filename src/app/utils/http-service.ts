@@ -2,12 +2,13 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular
 import { Injectable } from '@angular/core';
 import { DataroomService } from './dataroom-service';
 import { environment } from '../../environments/environment';
-import { catchError, firstValueFrom, throwError } from 'rxjs';
+import { catchError, firstValueFrom, throwError, timeout } from 'rxjs';
 
 export interface HttpOptions {
   headers?: HttpHeaders | {[header: string]: string | string[]};
   params?: HttpParams | {[param: string]: string | string[] | number | boolean};
   body?: any;
+  timeout?: number;
 }
 
 @Injectable({
@@ -15,6 +16,7 @@ export interface HttpOptions {
 })
 export class HttpService {
   private headers: HttpHeaders;
+  private timeout: number = 45000; // 45s
 
   constructor(private http: HttpClient, private room: DataroomService) {
     const domain = room.getDefaultDomain();
@@ -25,8 +27,10 @@ export class HttpService {
 
   get<T = any>(url: string, options?: HttpOptions) {
     const httpOptions = this.prepareHttpOptions(options);
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.get<T>(url, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -41,8 +45,10 @@ export class HttpService {
 
   post<T = any>(url: string, body: any, options?: HttpOptions) {
     const httpOptions = this.prepareHttpOptions(options);
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.post<T>(url, body, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -58,8 +64,10 @@ export class HttpService {
   // fields update
   put<T = any>(url: string, body: any, options?: HttpOptions) {
     const httpOptions = this.prepareHttpOptions(options);
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.put<T>(url, body, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -75,8 +83,10 @@ export class HttpService {
   // field update
   patch<T = any>(url: string, body: any, options?: HttpOptions) {
     const httpOptions = this.prepareHttpOptions(options);
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.patch<T>(url, body, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -91,8 +101,10 @@ export class HttpService {
 
   delete<T = any>(url: string, options?: HttpOptions) {
     const httpOptions = this.prepareHttpOptions(options);
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.delete<T>(url, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -111,8 +123,10 @@ export class HttpService {
       ...this.prepareHttpOptions(options),
       responseType: 'blob' as const
     };
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.get(url, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -132,8 +146,10 @@ export class HttpService {
       ...this.prepareHttpOptions(options),
       headers
     };
+    const timeOut = options?.timeout || this.timeout;
 
     return this.http.post<T>(url, formData, httpOptions).pipe(
+      timeout(timeOut),
       catchError(err => this.errorHandle(err))
     );
   }
@@ -162,10 +178,24 @@ export class HttpService {
     this.headers = this.headers.delete(key);
   }
 
-  private errorHandle(err: HttpErrorResponse) {
-    const error = {
-      status: err.status,
-      message: err.error?.message || this.getErrorMessage(err)
+  private errorHandle(err: HttpErrorResponse | any) {
+    let error: any;
+
+    if (err.name === 'TimeoutError') {
+      error = {
+        status: 408, // Request Timeout
+        message: 'Request timeout. The server took too long to respond!'
+      };
+    } else if (err instanceof HttpErrorResponse) {
+      error = {
+        status: err.status,
+        message: err.error?.message || this.getErrorMessage(err)
+      };
+    } else {
+      error = {
+        status: 0,
+        message: err.message || 'Unknown error!'
+      };
     }
 
     console.log("HTTP Error: ", {

@@ -1,6 +1,6 @@
 {
   "name": "Genius Utils",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -31,6 +31,7 @@
     "@angular/material": "^21.0.2",
     "@angular/platform-browser": "^21.0.0",
     "@angular/router": "^21.0.0",
+    "crypto-js": "^4.2.0",
     "nanoid": "^5.1.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -39,6 +40,7 @@
     "@angular/build": "^21.0.2",
     "@angular/cli": "^21.0.2",
     "@angular/compiler-cli": "^21.0.0",
+    "@types/crypto-js": "^4.2.2",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

@@ -2,7 +2,7 @@
 :root {
     --gi-version: "1.0.0";
     --gi-release-date: "2026-02-24";
-    --gi-modified-date: "2026-02-24";
+    --gi-modified-date: "2026-03-04";
     --gi-author: "Genius iQ";
     --gi-website: "https://soehtetpaing.github.io/portfolio/";
 }
@@ -116,6 +116,258 @@
     background: black;
 }
 
+.bg-hash-000 {
+    background: #000;
+}
+
+.bg-hash-005 {
+    background: #005;
+}
+
+.bg-hash-025 {
+    background: #025;
+}
+
+.bg-hash-050 {
+    background: #050;
+}
+
+.bg-hash-075 {
+    background: #075;
+}
+
+.bg-hash-255 {
+    background: #255;
+}
+
+.bg-hash-500 {
+    background: #500;
+}
+
+.bg-hash-505 {
+    background: #505;
+}
+
+.bg-hash-525 {
+    background: #525;
+}
+
+.bg-hash-550 {
+    background: #550;
+}
+
+.bg-hash-575 {
+    background: #575;
+}
+
+.bg-hash-755 {
+    background: #755;
+}
+
+.bg-hash-00f {
+    background: #00f;
+}
+
+.bg-hash-25f {
+    background: #25f;
+}
+
+.bg-hash-50f {
+    background: #50f;
+}
+
+.bg-hash-75f {
+    background: #75f;
+}
+
+.bg-hash-0f0 {
+    background: #0f0;
+}
+
+.bg-hash-2f5 {
+    background: #2f5;
+}
+
+.bg-hash-5f0 {
+    background: #5f0;
+}
+
+.bg-hash-7f5 {
+    background: #7f5;
+}
+
+.bg-hash-f00 {
+    background: #f00;
+}
+
+.bg-hash-f25 {
+    background: #f25;
+}
+
+.bg-hash-f50 {
+    background: #f50;
+}
+
+.bg-hash-f75 {
+    background: #f75;
+}
+
+.bg-hash-ccf {
+    background: #ccf;
+}
+
+.bg-hash-cef {
+    background: #cef;
+}
+
+.bg-hash-ecf {
+    background: #ecf;
+}
+
+.bg-hash-eef {
+    background: #eef;
+}
+
+.bg-hash-cfc {
+    background: #cfc;
+}
+
+.bg-hash-cfe {
+    background: #cfe;
+}
+
+.bg-hash-efc {
+    background: #efc;
+}
+
+.bg-hash-efe {
+    background: #efe;
+}
+
+.bg-hash-fcc {
+    background: #fcc;
+}
+
+.bg-hash-fce {
+    background: #fce;
+}
+
+.bg-hash-fec {
+    background: #fec;
+}
+
+.bg-hash-fee {
+    background: #fee;
+}
+
+.bg-hash-ccc {
+    background: #ccc;
+}
+
+.bg-hash-eee {
+    background: #eee;
+}
+
+.bg-hash-0cc {
+    background: #0cc;
+}
+
+.bg-hash-5cc {
+    background: #5cc;
+}
+
+.bg-hash-0ce {
+    background: #0ce;
+}
+
+.bg-hash-5ce {
+    background: #5ce;
+}
+
+.bg-hash-0ec {
+    background: #0ec;
+}
+
+.bg-hash-5ec {
+    background: #5ec;
+}
+
+.bg-hash-0ee {
+    background: #0ee;
+}
+
+.bg-hash-5ee {
+    background: #5ee;
+}
+
+.bg-hash-c0c {
+    background: #c0c;
+}
+
+.bg-hash-c5c {
+    background: #c5c;
+}
+
+.bg-hash-c0e {
+    background: #c0e;
+}
+
+.bg-hash-c5e {
+    background: #c5e;
+}
+
+.bg-hash-e0c {
+    background: #e0c;
+}
+
+.bg-hash-e5c {
+    background: #e5c;
+}
+
+.bg-hash-e0e {
+    background: #e0e;
+}
+
+.bg-hash-e5e {
+    background: #e5e;
+}
+
+.bg-hash-cc0 {
+    background: #cc0;
+}
+
+.bg-hash-cc5 {
+    background: #cc5;
+}
+
+.bg-hash-ce0 {
+    background: #ce0;
+}
+
+.bg-hash-ce5 {
+    background: #ce5;
+}
+
+.bg-hash-ec0 {
+    background: #ec0;
+}
+
+.bg-hash-ec5 {
+    background: #ec5;
+}
+
+.bg-hash-ee0 {
+    background: #ee0;
+}
+
+.bg-hash-ee5 {
+    background: #ee5;
+}
+
+.bg-hash-fff {
+    background: #fff;
+}
+
 .text-tomato {
     color: tomato;
 }
@@ -194,6 +446,258 @@
 
 .text-black {
     color: black;
+}
+
+.text-hash-000 {
+    color: #000;
+}
+
+.text-hash-005 {
+    color: #005;
+}
+
+.text-hash-025 {
+    color: #025;
+}
+
+.text-hash-050 {
+    color: #050;
+}
+
+.text-hash-075 {
+    color: #075;
+}
+
+.text-hash-255 {
+    color: #255;
+}
+
+.text-hash-500 {
+    color: #500;
+}
+
+.text-hash-505 {
+    color: #505;
+}
+
+.text-hash-525 {
+    color: #525;
+}
+
+.text-hash-550 {
+    color: #550;
+}
+
+.text-hash-575 {
+    color: #575;
+}
+
+.text-hash-755 {
+    color: #755;
+}
+
+.text-hash-00f {
+    color: #00f;
+}
+
+.text-hash-25f {
+    color: #25f;
+}
+
+.text-hash-50f {
+    color: #50f;
+}
+
+.text-hash-75f {
+    color: #75f;
+}
+
+.text-hash-0f0 {
+    color: #0f0;
+}
+
+.text-hash-2f5 {
+    color: #2f5;
+}
+
+.text-hash-5f0 {
+    color: #5f0;
+}
+
+.text-hash-7f5 {
+    color: #7f5;
+}
+
+.text-hash-f00 {
+    color: #f00;
+}
+
+.text-hash-f25 {
+    color: #f25;
+}
+
+.text-hash-f50 {
+    color: #f50;
+}
+
+.text-hash-f75 {
+    color: #f75;
+}
+
+.text-hash-ccf {
+    color: #ccf;
+}
+
+.text-hash-cef {
+    color: #cef;
+}
+
+.text-hash-ecf {
+    color: #ecf;
+}
+
+.text-hash-eef {
+    color: #eef;
+}
+
+.text-hash-cfc {
+    color: #cfc;
+}
+
+.text-hash-cfe {
+    color: #cfe;
+}
+
+.text-hash-efc {
+    color: #efc;
+}
+
+.text-hash-efe {
+    color: #efe;
+}
+
+.text-hash-fcc {
+    color: #fcc;
+}
+
+.text-hash-fce {
+    color: #fce;
+}
+
+.text-hash-fec {
+    color: #fec;
+}
+
+.text-hash-fee {
+    color: #fee;
+}
+
+.text-hash-ccc {
+    color: #ccc;
+}
+
+.text-hash-eee {
+    color: #eee;
+}
+
+.text-hash-0cc {
+    color: #0cc;
+}
+
+.text-hash-5cc {
+    color: #5cc;
+}
+
+.text-hash-0ce {
+    color: #0ce;
+}
+
+.text-hash-5ce {
+    color: #5ce;
+}
+
+.text-hash-0ec {
+    color: #0ec;
+}
+
+.text-hash-5ec {
+    color: #5ec;
+}
+
+.text-hash-0ee {
+    color: #0ee;
+}
+
+.text-hash-5ee {
+    color: #5ee;
+}
+
+.text-hash-c0c {
+    color: #c0c;
+}
+
+.text-hash-c5c {
+    color: #c5c;
+}
+
+.text-hash-c0e {
+    color: #c0e;
+}
+
+.text-hash-c5e {
+    color: #c5e;
+}
+
+.text-hash-e0c {
+    color: #e0c;
+}
+
+.text-hash-e5c {
+    color: #e5c;
+}
+
+.text-hash-e0e {
+    color: #e0e;
+}
+
+.text-hash-e5e {
+    color: #e5e;
+}
+
+.text-hash-cc0 {
+    color: #cc0;
+}
+
+.text-hash-cc5 {
+    color: #cc5;
+}
+
+.text-hash-ce0 {
+    color: #ce0;
+}
+
+.text-hash-ce5 {
+    color: #ce5;
+}
+
+.text-hash-ec0 {
+    color: #ec0;
+}
+
+.text-hash-ec5 {
+    color: #ec5;
+}
+
+.text-hash-ee0 {
+    color: #ee0;
+}
+
+.text-hash-ee5 {
+    color: #ee5;
+}
+
+.text-hash-fff {
+    color: #fff;
 }
 
 .text-parent {

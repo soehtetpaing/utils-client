@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row pe-2 pe-md-0">
     <div class="col-12 col-md-6">
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get UniqueId</div>
@@ -29,7 +29,8 @@
                 <div class="card-text">
                     <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
                         <mat-label>Enter plain text</mat-label>
-                        <input matInput [(ngModel)]="plainText" id="plainText" placeholder="myP@ssw0rd">
+                        <textarea matInput [(ngModel)]="plainText" id="plainText" placeholder="myP@ssw0rd" rows="5">
+                        </textarea>
                     </mat-form-field>
                     <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
                         <mat-label>Enter secret key</mat-label>
@@ -48,7 +49,8 @@
 
                     <div class="terminal-output terminal-output-light-mode mt-2">
                         <small class="text-muted">
-                            $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                            $&nbsp; Result: 
+                            <!-- <span class="text-danger"><sup class="fw-bold">* API</sup></span> -->
                         </small>
                         <div class="mb-1">
                             <small  class="text-muted">$&nbsp; </small>{{ encryptedText }}
@@ -63,7 +65,8 @@
                 <div class="card-text">
                     <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
                         <mat-label>Enter encrypted text</mat-label>
-                        <input matInput [(ngModel)]="de_encryptedText" id="de_encryptedText" placeholder="b8de647bf8a8d2383f11f808b8933de0.b67c1d492dff4b406cd36b8e3404085f">
+                        <textarea matInput [(ngModel)]="de_encryptedText" id="de_encryptedText" placeholder="AWd6Lx4QqyGsQQZo8Jo8pi+dcgAfGdZ8vKGG2uG6ukw=" rows="5">
+                        </textarea>
                     </mat-form-field>
                     <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
                         <mat-label>Enter secret key</mat-label>
@@ -82,7 +85,8 @@
 
                     <div class="terminal-output terminal-output-light-mode mt-2">
                         <small class="text-muted">
-                            $&nbsp; Result: <span class="text-danger"><sup class="fw-bold">* API</sup></span>
+                            $&nbsp; Result: 
+                            <!-- <span class="text-danger"><sup class="fw-bold">* API</sup></span> -->
                         </small>
                         <div class="mb-1">
                             <small  class="text-muted">$&nbsp; </small>{{ decryptedText }}
@@ -137,7 +141,7 @@
                 <div class="card-text">
                     <mat-form-field appearance="outline" class="d-block pt-2 pb-1">
                         <mat-label>Enter token</mat-label>
-                        <textarea matInput [(ngModel)]="v_x_access_token" id="v_x_access_token" placeholder="493149584b74694b395250.4f0c86a96587205f1e60c199b95486b695c2655e0e23ae3d95f7328664e6d6d0.19c1f530346.2a">
+                        <textarea matInput [(ngModel)]="v_x_access_token" id="v_x_access_token" rows="5" placeholder="493149584b74694b395250.4f0c86a96587205f1e60c199b95486b695c2655e0e23ae3d95f7328664e6d6d0.19c1f530346.2a">
                         </textarea>
                     </mat-form-field>
                     <div class="row">

@@ -1,22 +1,10 @@
-html, body { height: 100vh; }
+/* html, body { height: 99dvh; } */
 body { margin: 0; padding: 0; }
 .font-en { font-family: Lora, sans-serif; }
 
 .font-nav {
     background-color: rgba(225, 225, 225, 0.5);
     padding: 3px;
-}
-
-.navbar-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1030;
-}
-
-.sidebar-sticky {
-    position: sticky;
-    top: 53px;
-    z-index: 1010;
 }
 
 .font-nav-sticky {
@@ -34,8 +22,8 @@ body { margin: 0; padding: 0; }
 
 .api-content {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
     background: transparent;
 }
 
@@ -51,6 +39,11 @@ body { margin: 0; padding: 0; }
 
 .terminal-output-light-mode { background-color: #e2e1e2; }
 .terminal-output-dark-mode { background-color: #171717; }
+
+.sample-color {
+    width: 150px;
+    height: 25px;
+}
 
 @media (min-width: 768px) {
     .api-content {

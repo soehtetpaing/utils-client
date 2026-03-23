@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "utils-demo": {
+    "utils-client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -73,10 +73,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "utils-demo:build:production"
+              "buildTarget": "utils-client:build:production"
             },
             "development": {
-              "buildTarget": "utils-demo:build:development"
+              "buildTarget": "utils-client:build:development"
             }
           },
           "defaultConfiguration": "development"

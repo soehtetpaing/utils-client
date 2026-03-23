@@ -20,6 +20,10 @@
   font-size: 14px;
 }
 
+.fs-px-15 {
+  font-size: 15px;
+}
+
 .fs-px-16 {
   font-size: 16px;
 }
@@ -35,49 +39,50 @@
 /*----- english font -----*/
 @font-face {
   font-family: "Apple Chancery";
-  src: url("../font/en/AppleChancery.woff2") format("woff2");
+  /* src: url('../font/en/AppleChancery.woff2'); */
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/AppleChancery.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Cambria";
-  src: url("../font/en/Cambria.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Cambria.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("../font/en/JetbrainsMono.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/JetbrainsMono.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lora";
-  src: url("../font/en/Lora.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Lora.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Monaco";
-  src: url("../font/en/Monaco.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Monaco.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Old Standard TT";
-  src: url("../font/en/OldStandardTT.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/OldStandardTT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald";
-  src: url("../font/en/Oswald.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Oswald.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -126,7 +131,21 @@
 /*----- korean font -----*/
 @font-face {
   font-family: "BM Yeon Sung";
-  src: url("../font/kr/BMYeonSung.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/BMYeonSung.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gowun Dodum";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/GowunDodum.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Song Myung";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/SongMyung.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -134,54 +153,62 @@
 .font-bm-yeon-sung {
     font-family: "BM Yeon Sung", serif;
 }
+
+.font-gowun-dodum {
+    font-family: "Gowun Dodum", sans-serif;
+}
+
+.font-song-myung {
+    font-family: "Song Myung", serif;
+}
 /*-----^-----*/
 
 /*----- myanmar font -----*/
 @font-face {
   font-family: "Burma Thin";
-  src: url("../font/mm/BurmaThin.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/BurmaThin.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Burmese Hand Writing";
-  src: url("../font/mm/BurmeseHandWriting.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/BurmeseHandWriting.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Cool jazz";
-  src: url("../font/mm/Cooljazz.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Cooljazz.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Phetkon";
-  src: url("../font/mm/Phetkon.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Phetkon.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pyidaungsu";
-  src: url("../font/mm/Pyidaungsu.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Pyidaungsu.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Yay Chan Zin";
-  src: url("../font/mm/YayChanZin.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/YayChanZin.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Z01-Umoe002";
-  src: url("../font/mm/Z01Umoe002.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Z01Umoe002.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }

@@ -28,7 +28,19 @@
     background: linear-gradient(to right, #6610f2,  #d63384, #0000ff, #20c997, #ffff19, #fd7e14, #ff0000);
 }
 
-.pointer {
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 53px;
+    z-index: 1010;
+}
+
+.cursor-pointer {
     cursor: pointer;
 }
 
@@ -38,6 +50,7 @@
 }
 
 .img-icon-size {
-    width: 1.4rem; 
+    width: 32px;
+    height: 32px;
     cursor: pointer;
 }

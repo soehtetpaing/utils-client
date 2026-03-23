@@ -1,1 +1,35 @@
-<p>subtle-component works!</p>
+<div class="fs-px-15 px-2 px-md-0">
+    <div class="">
+        <a class="d-flex align-items-center gap-2 text-decoration-none"
+            href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">
+            <span class="material-symbols-outlined" style="margin-top: 3px;">link</span>
+            <span class="fs-px-16">Subtle</span>
+        </a>
+    </div>
+    <p class="text-deeppink">Background-image suits with subtle because it has low file size with high quality.</p>
+
+    <div class="center text-center">
+        <div class="gi-tooltip top">
+            <img #subtleImage [src]="currentImage.path" [alt]="currentImage.name" width="400" height="300"
+                class="day-night img-fluid border" (mouseover)="onImageMouseOver()" (mouseleave)="onImageMouseLeave()">
+            <span class="gi-tooltip-text">Mouseover to change background!</span>
+        </div>
+        <br>
+
+        <div class="btn-group mt-3" role="group" aria-label="Image navigation">
+            <button type="button" class="btn btn-outline-primary" (click)="previousImage()" [disabled]="!currentImage">
+                <i class="fa fa-chevron-circle-left"></i>
+                <span class="visually-hidden">Previous image</span>
+            </button>
+
+            <button type="button" class="btn btn-outline-secondary disabled" aria-disabled="true">
+                {{ currentImage.name }}
+            </button>
+
+            <button type="button" class="btn btn-outline-primary" (click)="nextImage()" [disabled]="!currentImage">
+                <i class="fa fa-chevron-circle-right"></i>
+                <span class="visually-hidden">Next image</span>
+            </button>
+        </div>
+    </div>
+</div>

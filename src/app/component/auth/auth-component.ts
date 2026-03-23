@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { DataroomService } from '../../utils/dataroom-service';
 import { finalize } from 'rxjs';
+import { AesService } from '../../utils/aes-service';
 
 @Component({
   selector: 'app-auth-component',
@@ -34,7 +35,7 @@ export class AuthComponent {
   v_x_access_status: number = 0;
   v_x_access_message:string = "";
 
-  constructor(private toast: ToastService, private room: DataroomService) {}
+  constructor(private aes: AesService, private toast: ToastService, private room: DataroomService) {}
 
   ngOnInit(): void {
     this.darkModeService.updateDarkModeExtra();
@@ -45,55 +46,62 @@ export class AuthComponent {
   }
 
   encrypt(plainText: string, secretKey: string) {
-    this.room.setLoading(true);
-    this.authService.encrypt(plainText, secretKey).pipe(
-      finalize(() => {
-        setTimeout(() => {
-          this.room.setLoading(false);
-        }, 1000);
-      })
-    ).subscribe({
-      next: resp => {
-        if (resp.status == 200) {
-          this.encryptedText = resp.data.encryptedText;
-        } else {
-          this.toast.error(resp.message);
-        }
-        // this.room.setLoading(false);
-      },
-      error: err => {
-        this.encryptedText = "";
-        this.toast.error(err.message);
-        // this.room.setLoading(false);
-      }
-    });
+    this.encryptedText = secretKey 
+                      ? this.aes.encrypt(plainText, secretKey) 
+                      : this.aes.encrypt(plainText);
+
+    // this.room.setLoading(true);
+    // this.authService.encrypt(plainText, secretKey).pipe(
+    //   finalize(() => {
+    //     setTimeout(() => {
+    //       this.room.setLoading(false);
+    //     }, 1000);
+    //   })
+    // ).subscribe({
+    //   next: resp => {
+    //     if (resp.status == 200) {
+    //       this.encryptedText = resp.data.encryptedText;
+    //     } else {
+    //       this.toast.error(resp.message);
+    //     }
+    //     // this.room.setLoading(false);
+    //   },
+    //   error: err => {
+    //     this.encryptedText = "";
+    //     this.toast.error(err.message);
+    //     // this.room.setLoading(false);
+    //   }
+    // });
   }
 
   decrypt(encryptedText: string, secretKey: string) {
     if (encryptedText) {
-      this.room.setLoading(true);
-      this.authService.decrypt(encryptedText, secretKey).pipe(
-        finalize(() => {
-          setTimeout(() => {
-            this.room.setLoading(false);
-          }, 1000);
-        })
-      ).subscribe({
-        next: resp => {
-          if (resp.status == 200) {
-            this.decryptedText = resp.data.decryptedText;
-          } else {
-            this.toast.error(resp.message);
-          }
+      this.decryptedText = secretKey 
+                        ? this.aes.decrypt(encryptedText, secretKey) 
+                        : this.aes.decrypt(encryptedText);
+      // this.room.setLoading(true);
+      // this.authService.decrypt(encryptedText, secretKey).pipe(
+      //   finalize(() => {
+      //     setTimeout(() => {
+      //       this.room.setLoading(false);
+      //     }, 1000);
+      //   })
+      // ).subscribe({
+      //   next: resp => {
+      //     if (resp.status == 200) {
+      //       this.decryptedText = resp.data.decryptedText;
+      //     } else {
+      //       this.toast.error(resp.message);
+      //     }
 
-          // this.room.setLoading(false);
-        },
-        error: err => {
-          this.decryptedText = "";
-          this.toast.error(err.message);
-          // this.room.setLoading(false);
-        }
-      });
+      //     // this.room.setLoading(false);
+      //   },
+      //   error: err => {
+      //     this.decryptedText = "";
+      //     this.toast.error(err.message);
+      //     // this.room.setLoading(false);
+      //   }
+      // });
     } else {
       this.toast.warn("Enter encrypted text!")
     }
