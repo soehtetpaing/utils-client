@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "utils-demo": {
+    "utils-client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -28,7 +28,15 @@
             "styles": [
               "src/styles.css",
               "src/styles.scss",
-              "public/css/genius.tooltip.css"
+              "public/css/genius.util.css",
+              "public/css/genius.font.css",
+              "public/css/genius.color.css",
+              "public/css/genius.tooltip.css",
+              "public/css/genius.message.shape.css",
+              "public/css/genius.subtle.pattern.css",
+              "public/css/genius.text.amazing.css",
+              "public/css/genius.text.heaven.css",
+              "public/css/genius.text.rainbow.css"
             ]
           },
           "configurations": {
@@ -65,10 +73,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "utils-demo:build:production"
+              "buildTarget": "utils-client:build:production"
             },
             "development": {
-              "buildTarget": "utils-demo:build:development"
+              "buildTarget": "utils-client:build:development"
             }
           },
           "defaultConfiguration": "development"

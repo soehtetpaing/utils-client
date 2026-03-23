@@ -1,83 +1,118 @@
-<div class="row">
+<div class="row pe-2 pe-md-0">
     <div class="col-12 col-md-6">
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Myanmar Datetime</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ mmDatetime }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getMyanmarDatetime()">Get</button>
+                        @if (mmDatetime) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmDatetime)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ mmDatetime }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getMyanmarDatetime()">Get</button>
-                @if (mmDatetime) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmDatetime)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Myanmar Hour</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ mmHour }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getMyanmarHour()">Get</button>
+                        @if (mmHour) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmHour)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ mmHour }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getMyanmarHour()">Get</button>
-                @if (mmHour) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmHour)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
-               <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
+        <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Myanmar Date</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ mmDate }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info ms-auto" (click)="getMyanmarDate()">Get</button>
+                        @if (mmDate) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip" (click)="copyToClipboard(mmDate)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ mmDate }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info ms-auto" (click)="getMyanmarDate()">Get</button>
-                @if (mmDate) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip" (click)="copyToClipboard(mmDate)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Myanmar Timestamp</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ mmTimestamp }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getMyanmarTimestamp()">Get</button>
+                        @if (mmTimestamp) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmTimestamp)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ mmTimestamp }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getMyanmarTimestamp()">Get</button>
-                @if (mmTimestamp) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmTimestamp)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
             <div class="card-title-light-mode text-secondary position-absolute px-2 ms-2 rounded" style="top: -0.7rem; font-size: 15px; font-weight: 500;">Get Myanmar Millisec</div>
             <div class="card-body">
                 <div class="card-text">
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ mmMillisec }}</div>
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getMyanmarMillisecond()">Get</button>
+                        @if (mmMillisec) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmMillisec)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ mmMillisec }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getMyanmarMillisecond()">Get</button>
-                @if (mmMillisec) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(mmMillisec)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div> 
     </div>
@@ -97,16 +132,24 @@
                             <input matInput [(ngModel)]="targetZone" id="targetZone" placeholder="Asia/Seoul">
                         </mat-form-field>
                     </div>
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ tgzDatetime }}</div>
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getDatetimeByZone(datetime, targetZone)">Get</button>
+                        @if (tgzDatetime) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(tgzDatetime)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ tgzDatetime }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getDatetimeByZone(datetime, targetZone)">Get</button>
-                @if (tgzDatetime) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(tgzDatetime)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
@@ -117,16 +160,24 @@
                         <mat-label>Enter execute time</mat-label>
                         <input matInput [(ngModel)]="ms" id="ms" placeholder="523530">
                     </mat-form-field>
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ apiExecuteTime }}</div>
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getApiExecuteTime(ms)">Get</button>
+                        @if (apiExecuteTime) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(apiExecuteTime)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ apiExecuteTime }}
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getApiExecuteTime(ms)">Get</button>
-                @if (apiExecuteTime) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(apiExecuteTime)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
         <div [attr.data-bs-theme]="darkModeService.darkModeSignal()" class="card bg-body-tertiary mt-4">
@@ -137,16 +188,24 @@
                         <mat-label>Enter expire time</mat-label>
                         <input matInput [(ngModel)]="expireTime" id="expireTime" placeholder="1766797260000">
                     </mat-form-field>
-                    <small class="text-muted">Result: </small>
-                    <div class="mb-1">{{ tokenExpireTime }}</div>    
+
+                    <div class="mt-1">
+                        <button class="btn btn-sm btn-info" (click)="getTokenExpireTime(expireTime)">Get</button>
+                        @if (tokenExpireTime) {
+                            <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(tokenExpireTime)">
+                                <i class="bi bi-copy px-1"></i>
+                                <span class="gi-tooltip-text">Copy</span>
+                            </button>
+                        }
+                    </div>
+
+                    <div class="terminal-output terminal-output-light-mode mt-2">
+                        <small class="text-muted">$&nbsp; Result:</small>
+                        <div class="mb-1">
+                            <small  class="text-muted">$&nbsp; </small>{{ tokenExpireTime }}
+                        </div>
+                    </div> 
                 </div>
-                <button class="btn btn-sm btn-info" (click)="getTokenExpireTime(expireTime)">Get</button>
-                @if (tokenExpireTime) {
-                    <button class="btn btn-sm btn-secondary ms-2 gi-tooltip end" (click)="copyToClipboard(tokenExpireTime)">
-                        <i class="bi bi-copy px-1"></i>
-                        <span class="gi-tooltip-text">Copy</span>
-                    </button>
-                }
             </div>
         </div>
     </div>

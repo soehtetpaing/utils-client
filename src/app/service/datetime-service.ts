@@ -10,7 +10,7 @@ export class DatetimeService {
 
   // get yyyyMMddHHmmSSS
   getMyanmarTimestamp(): string {
-    const now = this.getMyanmarZonedDateTime();
+    const now = this.getMyanmarZonedDateTime(false);
     return `${now.year}${now.month}${now.day}${now.hour}${now.minute}${now.second}${now.millisecond
         .toString()
         .padStart(3, "0")}`;
@@ -122,7 +122,7 @@ export class DatetimeService {
   }
 
   // get Yangon Time
-  getMyanmarZonedDateTime(): any {
+  getMyanmarZonedDateTime(hour12 = true): any {
     const now = new Date();
 
     const formatter = new Intl.DateTimeFormat("en-GB", {
@@ -133,7 +133,7 @@ export class DatetimeService {
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
-        hour12: true,
+        hour12
     });
 
     const parts = formatter.formatToParts(now);

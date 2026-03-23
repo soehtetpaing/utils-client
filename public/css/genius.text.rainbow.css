@@ -1,0 +1,15 @@
+/*----- genius.text.rainbow.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2022-04-08";
+    --gi-modified-date: "2026-02-24";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.text-rainbow {
+    color: linear-gradient(to right, #6610f2,  #d63384, #0000ff, #20c997, #ffff19, #fd7e14, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

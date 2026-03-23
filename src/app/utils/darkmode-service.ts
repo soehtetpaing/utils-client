@@ -15,17 +15,25 @@ export class DarkmodeService {
     this.darkModeSignal.update((value) => {
       return value === 'dark' ? 'light' : 'dark';
     });
+
+    this.updateDarkModeExtra();
   }
 
   updateDarkModeExtra() {
     const mode = this.darkModeSignal();
-    console.log(mode);
 
     // for card tile
     document.querySelectorAll('.card-title-light-mode, .card-title-dark-mode')
     .forEach(el => {
       el.classList.remove('card-title-light-mode', 'card-title-dark-mode');
       el.classList.add(mode === 'dark' ? 'card-title-dark-mode' : 'card-title-light-mode');
+    });
+
+    // for terminal output
+    document.querySelectorAll('.terminal-output-light-mode, .terminal-output-dark-mode')
+    .forEach(el => {
+      el.classList.remove('terminal-output-light-mode', 'terminal-output-dark-mode');
+      el.classList.add(mode === 'dark' ? 'terminal-output-dark-mode' : 'terminal-output-light-mode');
     });
   }
 }

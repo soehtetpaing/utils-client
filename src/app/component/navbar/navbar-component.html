@@ -1,7 +1,6 @@
-<div class="navbar-sticky">
-    <nav class="navbar navbar-expand-lg border mt-1 p-1">
-        <!-- background shapes animation -->
-        <!-- <div class="scene">
+<nav #navbar class="navbar navbar-expand-lg border mt-1 p-1">
+    <!-- background shapes animation -->
+    <!-- <div class="scene">
         <div class="shape circle-md"></div>
         <div class="triangle-sm delay-1"></div>
         <div class="shape rectangle-md delay-2"></div>
@@ -14,53 +13,62 @@
         <div class="shape rectangle-lg delay-1"></div>
     </div> -->
 
-        <div class="container-fluid">
-            <a class="d-flex align-items-center gap-2 navbar-brand" routerLink="/dashboard">
-                <img src="utils-v2.ico" alt="Logo" width="30" height="30" class="d-inline-block">
-                <div style="font-size: large;">
-                    <span class="text-info">Genius</span>
-                    <span class="text-muted"> Utils</span>
-                </div>
-            </a>
-            <div class="">
-                <button class="d-lg-none p-1 me-1" mat-icon-button (click)="toggleDarkMode()">
+    <div class="container-fluid">
+        <a class="d-flex align-items-center gap-2 navbar-brand" routerLink="/dashboard">
+            <img src="utils-v2.ico" alt="Logo" width="30" height="30" class="d-inline-block">
+            <div class="position-relative" style="font-size: large;">
+                <span class="text-info">Genius</span>
+                <span class="text-muted"> Utils</span>
+                <span class="position-absolute bottom-0 badge text-bg-secondary fs-px-10 ms-2 mb-1">{{'v' + version}}</span>
+            </div>
+        </a>
+        <div class="">
+            <button class="d-lg-none p-1 me-1" mat-icon-button (click)="toggleDarkMode()">
+                <mat-icon
+                    [ngClass]="darkModeService.darkModeSignal() === 'dark' ? 'fa-spin': 'animate__animated animate__swing animate__slow animate__infinite'"
+                    [ngStyle]="{ 'color': darkModeService.darkModeSignal() === 'dark' ? '#ffc107' : 'silver' }">
+                    {{ darkModeService.darkModeSignal() === 'dark' ? 'light_mode' : 'dark_mode' }}
+                </mat-icon>
+            </button>
+            <button class="d-lg-none p-1" mat-icon-button data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse nav-menu d-lg-flex" id="navbar">
+            <div class="col-lg-2"></div>
+            <ul class="navbar-nav col-lg-7 justify-content-lg-center gap-2">
+                <!-- <li class="nav-item d-none">
+                    <a class="nav-link active" aria-current="page" routerLink="/dashboard" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Dashboard</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/font" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Font</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/color" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Color</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/icon" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Icon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/subtle" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Subtle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/animation" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Animation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/util" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbar">Utils Lib</a>
+                </li>
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button class="d-none d-lg-inline p-1" mat-icon-button (click)="toggleDarkMode()">
                     <mat-icon
+                        [ngClass]="darkModeService.darkModeSignal() === 'dark' ? 'fa-spin': 'animate__animated animate__swing animate__slow animate__infinite'"
                         [ngStyle]="{ 'color': darkModeService.darkModeSignal() === 'dark' ? '#ffc107' : 'silver' }">
                         {{ darkModeService.darkModeSignal() === 'dark' ? 'light_mode' : 'dark_mode' }}
                     </mat-icon>
                 </button>
-                <button class="d-lg-none p-1" mat-icon-button data-bs-toggle="collapse" data-bs-target="#navbar"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
-                    <mat-icon>more_vert</mat-icon>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse nav-menu d-lg-flex" id="navbar">
-                <div class="col-lg-2"></div>
-                <ul class="navbar-nav col-lg-7 justify-content-lg-center gap-2">
-                    <!-- <li class="nav-item d-none">
-                        <a class="nav-link active" aria-current="page" routerLink="/dashboard"
-                            routerLinkActive="active">Dashboard</a>
-                    </li> -->
-                    <li class="nav-item"><a class="nav-link" routerLink="/font" routerLinkActive="active">Font</a></li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/color" routerLinkActive="active">Color</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/icon" routerLinkActive="active">Icon</a></li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/subtle" routerLinkActive="active">Subtle</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/animation"
-                            routerLinkActive="active">Animation</a></li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/util" routerLinkActive="active">Utils Lib</a>
-                    </li>
-                </ul>
-                <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <button class="d-none d-lg-inline p-1" mat-icon-button (click)="toggleDarkMode()">
-                        <mat-icon
-                            [ngStyle]="{ 'color': darkModeService.darkModeSignal() === 'dark' ? '#ffc107' : 'silver' }">
-                            {{ darkModeService.darkModeSignal() === 'dark' ? 'light_mode' : 'dark_mode' }}
-                        </mat-icon>
-                    </button>
-                </div>
             </div>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>

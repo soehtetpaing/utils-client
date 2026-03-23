@@ -1,0 +1,243 @@
+/*----- genius.font.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2026-02-23";
+    --gi-modified-date: "2026-02-24";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.fs-px-10 {
+  font-size: 10px;
+}
+
+.fs-px-12 {
+  font-size: 12px;
+}
+
+.fs-px-14 {
+  font-size: 14px;
+}
+
+.fs-px-15 {
+  font-size: 15px;
+}
+
+.fs-px-16 {
+  font-size: 16px;
+}
+
+.fs-px-18 {
+  font-size: 18px;
+}
+
+.fs-px-20 {
+  font-size: 20px;
+}
+
+/*----- english font -----*/
+@font-face {
+  font-family: "Apple Chancery";
+  /* src: url('../font/en/AppleChancery.woff2'); */
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/AppleChancery.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cambria";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Cambria.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/JetbrainsMono.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Lora.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Monaco";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Monaco.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/OldStandardTT.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/en/Oswald.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-serif {
+    font-family: serif;
+}
+
+.font-sans-serif {
+    font-family: sans-serif;
+}
+
+.font-monaspace {
+    font-family: monospace;
+}
+
+.font-apple-chancery {
+    font-family: "Apple Chancery", cursive;
+}
+
+.font-cambria {
+    font-family: "Cambria", serif;
+}
+
+.font-jetbrains-mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.font-lora {
+    font-family: "Lora", serif;
+}
+
+.font-monaco {
+    font-family: "Monaco", monospace;
+}
+
+.font-old-standard-tt {
+    font-family: "Old Standard TT", serif;
+}
+
+.font-oswald {
+    font-family: "Oswald", sans-serif;
+}
+/*-----^-----*/
+
+/*----- korean font -----*/
+@font-face {
+  font-family: "BM Yeon Sung";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/BMYeonSung.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gowun Dodum";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/GowunDodum.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Song Myung";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/kr/SongMyung.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-bm-yeon-sung {
+    font-family: "BM Yeon Sung", serif;
+}
+
+.font-gowun-dodum {
+    font-family: "Gowun Dodum", sans-serif;
+}
+
+.font-song-myung {
+    font-family: "Song Myung", serif;
+}
+/*-----^-----*/
+
+/*----- myanmar font -----*/
+@font-face {
+  font-family: "Burma Thin";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/BurmaThin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Burmese Hand Writing";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/BurmeseHandWriting.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cool jazz";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Cooljazz.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Phetkon";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Phetkon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pyidaungsu";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Pyidaungsu.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yay Chan Zin";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/YayChanZin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Z01-Umoe002";
+  src: url("https://cdn.jsdelivr.net/gh/soehtetpaing/cdn-assets@v1.0.1/font/mm/Z01Umoe002.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-burma-thin {
+    font-family: "Burma Thin", serif;
+}
+
+.font-burmese-hand-writing {
+    font-family: "Burmese Hand Writing", cursive;
+}
+
+.font-cool-jazz {
+    font-family: "Cool jazz", cursive;
+}
+
+.font-phetkon {
+    font-family: "Phetkon", serif;
+}
+
+.font-pyidaungsu {
+    font-family: "Pyidaungsu", serif;
+}
+
+.font-yay-chan-zin {
+    font-family: "Yay Chan Zin", serif;
+}
+
+.font-umoe {
+    font-family: "Z01-Umoe002", monospace;
+}
+/*-----^-----*/

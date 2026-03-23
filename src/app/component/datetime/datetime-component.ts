@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { DarkmodeService } from '../../service/darkmode-service';
+import { DarkmodeService } from '../../utils/darkmode-service';
 import { DatetimeService } from '../../service/datetime-service';
-import { ToastService } from '../../service/toast-service';
+import { ToastService } from '../../utils/toast-service';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -17,20 +17,24 @@ export class DatetimeComponent {
   darkModeService: DarkmodeService = inject(DarkmodeService);
   datetimeService: DatetimeService = inject(DatetimeService);
 
-  mmTimestamp: string = '';
-  mmDate: string = '';
-  mmHour: string = '';
-  mmMillisec: string = '';
-  mmDatetime: string = '';
-  tgzDatetime: string = '';
-  datetime: any = '';
-  targetZone: any = '';
-  apiExecuteTime: string = '';
-  ms: any = '';
-  tokenExpireTime: string = '';
-  expireTime: any = '';
+  mmTimestamp: string = "";
+  mmDate: string = "";
+  mmHour: string = "";
+  mmMillisec: string = "";
+  mmDatetime: string = "";
+  tgzDatetime: string = "";
+  datetime: any = "";
+  targetZone: any = "";
+  apiExecuteTime: string = "";
+  ms: any = "";
+  tokenExpireTime: string = "";
+  expireTime: any = "";
 
-  constructor(private toast: ToastService) { }
+  constructor(private toast: ToastService) {}
+
+  ngOnInit(): void {
+    this.darkModeService.updateDarkModeExtra();
+  }
 
   getMyanmarTimestamp() {
     this.mmTimestamp = this.datetimeService.getMyanmarTimestamp();
@@ -53,26 +57,26 @@ export class DatetimeComponent {
   }
 
   getDatetimeByZone(datetime: string, targetZone: string) {
-    if (datetime == '') {
-      this.toast.error("Enter datetime!")
-    } else if (targetZone == '') {
-      this.toast.error("Enter target zone!")
+    if (datetime == "") {
+      this.toast.warn("Enter datetime!")
+    } else if (targetZone == "") {
+      this.toast.warn("Enter target zone!")
     } else {
       this.tgzDatetime = this.datetimeService.getDateTimeByZone(datetime, targetZone);
     }
   }
 
   getApiExecuteTime(ms: any) {
-    if (ms == '') {
-      this.toast.error("Enter execute time!")
+    if (ms == "") {
+      this.toast.warn("Enter execute time!")
     } else {
       this.apiExecuteTime = this.datetimeService.formatApiExecuteTime(Number(ms));
     }
   }
 
   getTokenExpireTime(ms: any) {
-    if (ms == '') {
-      this.toast.error("Enter expire time!")
+    if (ms == "") {
+      this.toast.warn("Enter expire time!")
     } else {
       this.tokenExpireTime = this.datetimeService.formatTokenExpireTime(Number(ms));
     }

@@ -1,0 +1,124 @@
+/*----- genius.message.shape.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2026-02-25";
+    --gi-modified-date: "2026-02-25";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.msg {
+    clear: both;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+.msg-box {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border: 1px solid #ccc;
+    float: left;
+    left: 2.2rem; 
+}
+.msg-box::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: -0.8px;
+    left: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+}
+.msg-box::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    left: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid #f8f9fa;
+    clear: both;
+}  
+.msg-box-img {
+    width: 2rem;
+    position: absolute;
+    top: 0rem;
+    left: -2.3rem;
+    border-radius: 50%;
+}
+.msg-box-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 13px;
+}
+.msg-box-body {
+    text-align: justify;
+    padding: 5px;
+}
+.msg-box-foot {
+    position: absolute;
+    font-size: 13px;
+    right: -3.5rem;
+    bottom: -0.7rem;
+    color: silver;
+}
+
+.msg-me {
+    position: relative;
+    background-color: dodgerblue;
+    text-align: right;
+    padding: 10px 15px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border: 1px solid blue;
+    float: right;
+    right: 2.2rem;
+}
+.msg-me::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: -0.8px;
+    right: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid blue;
+}
+.msg-me::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    right: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid dodgerblue;
+    clear: both;
+}  
+.msg-me-img {
+    width: 2rem;
+    position: absolute;
+    top: 0rem;
+    right: -2.3rem;
+    border-radius: 50%;
+}
+.msg-me-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 5px;
+    font-size: 13px;
+}
+.msg-me-body {
+    text-align: justify;
+    padding: 5px;
+}
+.msg-me-foot {
+    position: absolute;
+    font-size: 13px;
+    left: -3.5rem;
+    bottom: -0.7rem;
+    color: silver;
+}

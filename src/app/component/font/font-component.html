@@ -1,1 +1,385 @@
-<p>font-component works!</p>
+<div class="fs-px-15 px-2 px-md-0">
+    <div class="font-nav font-nav-sticky mt-1 mb-2 rounded">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-1">
+                <div class="d-none d-md-inline">
+                    <img src="image/font_book.png" alt="font-logo" width="23">
+                </div>
+                <div class="m-md-0" style="padding-top: 2px;">Genius Fonts</div>
+            </div>
+            <div class="">
+                <div class="input-group">
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-10')">10px</button>
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-12')">12px</button>
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-14')">14px</button>
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-16')">16px</button>
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-18')">18px</button>
+                    <button class="form-control form-control-sm" (click)="updateFontSize('fs-px-20')">20px</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-2">
+        <p class="text-violet">
+            Notice:
+            <span class="text-deeppink">
+                There are 3 types of font in the world!
+            </span>
+        </p>
+
+        <div class="row text-dark text-center" style="padding: 0px 12px;">
+
+            <div class="col-sm bg-silver mb-2 font-serif py-3 toggle-font-size me-0 me-md-1">
+                <h6>serif</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-mediumseagreen mb-2 font-sans-serif py-3 toggle-font-size mx-0 mx-md-1">
+                <h6>sans-serif</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-deepskyblue mb-2 font-monospace py-3 toggle-font-size ms-0 ms-md-1">
+                <h6>monospace</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="">
+        <p class="text-violet">
+            Notice: When call font name,
+            <span class="text-deeppink">
+                if 1 words name, call directly
+                <span class="text-mediumseagreen">
+                    (eg. Cambria)
+                </span>
+                & if name with space, call with ' ' or " "
+                <span class="text-mediumseagreen">
+                    (eg. 'Apple Chancery')</span>!
+            </span>
+        </p>
+
+        <div class="row text-light text-center" style="padding: 0px 12px;">
+
+            <div class="col-sm bg-primary mb-2 font-apple-chancery py-3 toggle-font-size">
+                <h6>Apple Chancery</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-secondary mb-2 font-bm-yeon-sung py-3 toggle-font-size">
+                <h6>BM Yeon Sung</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-success mb-2 font-burma-thin py-3 toggle-font-size">
+                <h6>Burma Thin</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-info mb-2 font-burmese-hand-writing py-3 toggle-font-size">
+                <h6>Burmese Hand Writing</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-warning mb-2 font-cambria py-3 toggle-font-size">
+                <h6>Cambria</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-danger mb-2 font-cool-jazz py-3 toggle-font-size">
+                <h6>Cool jazz</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row text-light text-center" style="padding: 0px 12px;">
+            <div class="col-sm bg-dark mb-2 font-gowun-dodum py-3 toggle-font-size">
+                <h6>Gowun Dodum</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-gray mb-2 font-jetbrains-mono py-3 toggle-font-size">
+                <h6>Jetbrains Mono</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-slateblue mb-2 font-lora py-3 toggle-font-size">
+                <h6>Lora</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-orange mb-2 font-monaco py-3 toggle-font-size">
+                <h6>Monaco</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-deeppink mb-2 font-old-standard-tt py-3 toggle-font-size">
+                <h6>Old Standard TT</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-tomato mb-2 font-oswald py-3 toggle-font-size">
+                <h6>Oswald</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row text-light text-center" style="padding: 0px 12px;">
+
+            <div class="col-sm bg-primary mb-2 font-phetkon py-3 toggle-font-size">
+                <h6>Phetkon</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-secondary mb-2 font-pyidaungsu py-3 toggle-font-size">
+                <h6>Pyidaungsu</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-success mb-2 font-song-myung py-3 toggle-font-size">
+                <h6>Song Myung</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-info mb-2 font-yay-chan-zin py-3 toggle-font-size">
+                <h6>Yay Chan Zin</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm bg-warning mb-2 font-umoe py-3 toggle-font-size">
+                <h6>Z01-Umoe002</h6>
+                <hr>
+                <p>
+                    Fonts that comply with the Unicode standard can be easily converted from one Unicode font to
+                    another.
+                </p>
+                <p>
+                    유니코드 표준을 준수하는 글꼴은 한 유니코드 글꼴에서 다른 유니코드 글꼴로 쉽게 변환할 수 있습니다.
+                </p>
+                <p>
+                    ယူနီကုတ်စံနှုန်းများကို လိုက်နာသော ဖောင့်များကို အသုံးပြုထားပါက ယူနီကုတ်ဖောင့်အမျိုးအစား တစ်ခုမှ
+                    အခြားတစ်ခုသို့အလွယ်တကူ ပြောင်းလဲနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="col-sm"></div>
+
+        </div>
+
+    </div>
+</div>

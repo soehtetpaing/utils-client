@@ -1,0 +1,15 @@
+/*----- genius.text.amazing.css -----*/
+:root {
+    --gi-version: "1.0.0";
+    --gi-release-date: "2022-04-08";
+    --gi-modified-date: "2026-02-24";
+    --gi-author: "Genius iQ";
+    --gi-website: "https://soehtetpaing.github.io/portfolio/";
+}
+/*-----^-----*/
+
+.text-amazing {
+    background: linear-gradient(to right, aqua, deepskyblue, deeppink, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

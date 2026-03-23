@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { DarkmodeService } from '../../service/darkmode-service';
+import { DarkmodeService } from '../../utils/darkmode-service';
 import { CommonService } from '../../service/common-service';
-import { ToastService } from '../../service/toast-service';
+import { ToastService } from '../../utils/toast-service';
 
 @Component({
   selector: 'app-common-component',
@@ -15,7 +15,11 @@ export class CommonComponent {
 
   syskey: any;
 
-  constructor(private toast: ToastService) { }
+  constructor(private toast: ToastService) {}
+
+  ngOnInit(): void {
+    this.darkModeService.updateDarkModeExtra();
+  }
 
   getSyskey() {
     this.syskey = this.commonService.getSyskey();

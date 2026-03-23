@@ -1,1 +1,337 @@
-<p>color-component works!</p>
+<div class="fs-px-15 px-2 px-md-0">
+    <div class="font-nav font-nav-sticky my-1 rounded">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-1">
+                <div class="">
+                    <img src="image/color_wheel.png" alt="font-logo" width="23">
+                </div>
+                <div class="m-0" style="padding-top: 2px;">Genius Colors</div>
+            </div>
+            <div class="">
+                <div class="input-group">
+                    <button routerLink="/color" fragment="favorite-color"
+                        class="form-control form-control-sm">Browse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="default my-2">
+        All color are mixture of
+        <span class="text-danger">Red</span>,
+        <span class="text-success">Green</span> &
+        <span class="text-primary">Blue</span> light!
+    </p>
+
+    <div class="row mb-3" style="padding: 0px 12px;">
+
+        <div class="col-sm bg-heaven mb-3 p-2 me-0 me-md-1">
+            <div class="">
+                Colors can be specified in
+                <br>
+                <ul>
+                    <li>
+                        name
+                        <span class="text-dark">
+                            (eg. style = "<span class="text-success">color: <span
+                                    class="text-danger">red</span></span>";)</span>
+                    </li>
+                    <li>
+                        rgb(<span class="text-danger">R</span>, <span class="text-success">G</span>, <span
+                            class="text-primary">B</span>)
+                        <br>
+                        * <span class="text-danger">R</span><span class="text-success">G</span><span
+                            class="text-primary">B</span> ~ 0 to 225<span class="text-dark">
+                            (eg. style = "color: <span class="text-success">rgb(<span class="text-danger">225</span>, 0,
+                                0)</span>";)
+                        </span>
+                    </li>
+                    <li>
+                        hexadecimal
+                        #<span class="text-danger">RR</span><span class="text-success">GG</span><span
+                            class="text-primary">BB</span>
+                        #<span class="text-danger">R</span><span class="text-success">G</span><span
+                            class="text-primary">B</span>
+                        <br>
+                        * <span class="text-danger">R</span><span class="text-success">G</span><span
+                            class="text-primary">B</span> ~ 0 to F/f<span class="text-dark">
+                            (eg. style = "color: <span class="text-success">#<span
+                                    class="text-danger">ff</span>0000/#<span class="text-danger">f</span>00</span>";)
+                        </span>
+                    </li>
+                    <li>
+                        keyword
+                        <span class="text-danger">currentcolor</span>
+                        <br>
+                        <pre class="default text-success">
+(e.g
+    #myDiv &#123;
+        color: <span class="text-danger">red</span>;
+        border: 10px solid <span class="text-danger">currentcolor</span>;
+    &#125;
+)
+                        </pre>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm bg-border mb-3 p-2 ms-0 ms-md-1">
+            <div class="">
+                * <span class="text-info">hue</span> ~ 0 to 360 <span class="text-danger">(color wheel)</span> in hsl
+                <span class="text-warning">in CSS3</span>/hwb <span class="text-warning">in CSS4</span>
+                <br>
+                *
+                <span class="text-primary">saturation</span>, <span class="text-silver">lightness</span>, <span
+                    class="text-silver">whiteness</span>, <span class="text-gray">blackness</span>, <span
+                    class="text-gray">darkness</span>
+                ~ 0% to 100%
+                <ul class="mt-2">
+                    <li>
+                        hsl( <span class="text-info">hue</span>, <span class="text-primary">saturation</span>, <span
+                            class="text-silver">lightness</span>) (eg. style = "<span class="text-success">color: <span
+                                style="color: hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</span></span>";)
+                    </li>
+                </ul>
+                <span class="text-warning">
+                    w3color.js with data-w3-color = "" in CSS4
+                </span>
+                <div class="px-3 mb-2">
+                    <span class="text-secondary">
+                        .html
+                    </span>
+                    <br>
+                    <span class="text-deeppink">
+                        &lt;script
+                    </span>
+                    src = "assets/js/w3color.js"
+                    <span class="text-deeppink">
+                        &gt;&lt;/script&gt;
+                    </span>
+                    <br>
+                    <span class="text-deeppink">
+                        &lt;script&gt;
+                    </span>
+                    <span class="text-lime">
+                        w3SetColorsByAttribute();
+                    </span>
+                    <span class="text-deeppink">
+                        &lt;/script&gt;
+                    </span>
+                </div>
+                <ul>
+                    <li>hwb(<span class="text-info">hue</span>, <span class="text-silver">whiteness</span>, <span
+                            class="text-gray">blackness</span>) (eg. <span class="text-success">
+                            data-w3-color</span> = "<span data-w3-color="hwb(0, 0%, 0%)"
+                            class="bg-red text-white">hwb(0, 0%, 0%)
+                        </span>";)
+                    </li>
+                    <li>
+                        cmyk(<span class="text-info">cyan</span>, <span class="text-hotpink">magenta</span>, <span
+                            class="text-warning">yellow</span>, <span class="text-gray">key/black</span>) (eg. <span
+                            class="text-success">
+                            data-w3-color</span> = "<span data-w3-color="cymk(100%, 0%, 0%, 0%)"
+                            class="bg-info">cymk(100%, 0%, 0%, 0%)</span>";)
+                    </li>
+                    <li>
+                        NCol (Natural Color) - <span class="text-info">hue</span>, <span
+                            class="text-silver">whiteness</span>, <span class="text-gray">darkness</span> (eg. <span
+                            class="text-success">
+                            data-w3-color</span> = "<span data-w3-color="R0, 0%, 0%" class="bg-red text-white">R0, 0%,
+                            0%
+                        </span>";)
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mb-3" style="padding: 0px 12px;">
+        <div class="col-sm col-md-4">
+            <div class="row center mb-1">
+                <div class="col sample-color">
+                    #<span class="text-danger">R</span><span class="text-success">G</span><span class="text-primary">B</span>
+                </div>
+                <div class="col">Hexadecimal</div>
+            </div>
+            @for (red of redColors; track $index) {
+                <div class="row center mb-1">
+                    <div class="col sample-color cursor-pointer mb-1" [style.background]="red" (click)="copyToClipboard(red)"></div>
+                    <div class="col" [style.color]="red">{{ red }}</div>
+                </div>
+            }
+        </div>
+
+        <div class="col-sm col-md-4">
+            <div class="row center mb-1">
+                <div class="col sample-color"></div>
+                <div class="col">Hexadecimal</div>
+            </div>
+            @for (green of greenColors; track $index) {
+                <div class="row center mb-1">
+                    <div class="col sample-color cursor-pointer mb-1" [style.background]="green" (click)="copyToClipboard(green)"></div>
+                    <div class="col" [style.color]="green">{{ green }}</div>
+                </div>
+            }
+        </div>
+
+        <div class="col-sm col-md-4">
+            <div class="row center mb-1">
+                <div class="col sample-color"></div>
+                <div class="col">Hexadecimal</div>
+            </div>
+            @for (blue of blueColors; track $index) {
+                <div class="row center mb-1">
+                    <div class="col sample-color cursor-pointer mb-1" [style.background]="blue" (click)="copyToClipboard(blue)"></div>
+                    <div class="col" [style.color]="blue">{{ blue }}</div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    <div class="row mb-3" style="padding: 0px 12px;">
+        <div class="col-sm mx-1 mb-2">
+            <div class="row center mb-1">
+                <div class="col sample-color">
+                    #<span class="text-danger">RR</span><span class="text-success">GG</span><span class="text-primary">BB</span>
+                </div>
+                <div class="col">Color Name</div>
+                <div class="col">Hexadecimal</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-tomato"></div>
+                <div class="col text-tomato">tomato</div>
+                <div class="col text-tomato">#ff6347</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-red"></div>
+                <div class="col text-red">red</div>
+                <div class="col text-red">#ff0000</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-violet"></div>
+                <div class="col text-violet">violet</div>
+                <div class="col text-violet">#ee82ee</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-hotpink"></div>
+                <div class="col text-hotpink">hotpink</div>
+                <div class="col text-hotpink">#ff69b4</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-deeppink"></div>
+                <div class="col text-deeppink">deeppink</div>
+                <div class="col text-deeppink">#ff1493</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-orange"></div>
+                <div class="col text-orange">orange</div>
+                <div class="col text-orange">#ffa500</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-gold"></div>
+                <div class="col text-gold">gold</div>
+                <div class="col text-gold">#ffd700</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-yellow"></div>
+                <div class="col text-yellow">yellow</div>
+                <div class="col text-yellow">#ffff00</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-mediumseagreen"></div>
+                <div class="col text-mediumseagreen">mediumseagreen</div>
+                <div class="col text-mediumseagreen">#3cb371</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-green"></div>
+                <div class="col text-green">green</div>
+                <div class="col text-green">#008000</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-lime"></div>
+                <div class="col text-lime">lime</div>
+                <div class="col text-lime">#00ff00</div>
+            </div>
+        </div>
+        <div class="col-sm mx-1 mb-2">
+            <div class="row center mb-1">
+                <div class="col sample-color"></div>
+                <div class="col">Color Name</div>
+                <div class="col">Hexadecimal</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-slateblue"></div>
+                <div class="col text-slateblue">slateblue</div>
+                <div class="col text-slateblue">#6a5acd</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-aqua"></div>
+                <div class="col text-aqua">aqua/cyan</div>
+                <div class="col text-aqua">#00ffff</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-deepskyblue"></div>
+                <div class="col text-deepskyblue">deepskyblue</div>
+                <div class="col text-deepskyblue">#00bfff</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-dodgerblue"></div>
+                <div class="col text-dodgerblue">dodgerblue</div>
+                <div class="col text-dodgerblue">#1e90ff</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-blue"></div>
+                <div class="col text-blue">blue</div>
+                <div class="col text-blue">#0000ff</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-white"></div>
+                <div class="col text-white">white</div>
+                <div class="col text-white">#ffffff</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-silver"></div>
+                <div class="col text-silver">silver</div>
+                <div class="col text-silver">#c0c0c0</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-gray"></div>
+                <div class="col text-gray">gray</div>
+                <div class="col text-mediumseagreen">#808080</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-black"></div>
+                <div class="col text-black">black</div>
+                <div class="col text-black">#000000</div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-heaven"></div>
+                <div class="col">
+                    linear-gradient
+                </div>
+                <div class="col">
+                    <span style="color: #ff99cc;">#ff99cc </span>
+                    &
+                    <span style="color: #33ccff;">#33ccff</span>
+                </div>
+            </div>
+            <div class="row center mb-1">
+                <div class="col sample-color bg-amazing"></div>
+                <div class="col">
+                    linear-gradient
+                </div>
+                <div class="col">
+                    <span class="text-deepskyblue">#00bfff</span>
+                    &
+                    <span class="text-deeppink">#ff1493</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
